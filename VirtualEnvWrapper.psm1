@@ -39,7 +39,7 @@ if (!(Test-Path $WORKON_HOME)) {
 # Get the absolute path for the environment
 #
 function Get-FullPythonEnvPath($EnvName) {
-    return ("{0}\{1}" -f $WORKON_HOME, $EnvName)
+    return (Join-Path $WORKON_HOME $EnvName)
 }
 
 
